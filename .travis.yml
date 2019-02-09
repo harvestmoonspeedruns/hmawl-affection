@@ -16,5 +16,6 @@ deploy:
   github-token: $GITHUB_TOKEN
   keep-history: true
   local-dir: dist
+  fqdn: hmawl-affection.harvestmoonspeedruns.com
   on:
     branch: master
