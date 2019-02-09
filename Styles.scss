@@ -1,0 +1,47 @@
+body {
+    background-color: #2c2530;
+    color: whitesmoke;
+}
+
+#app {
+    text-align: center;
+
+    .reset {
+        position: fixed;
+        top: 5px;
+        left: 5px;
+    }
+
+    .hearts {
+        width: 224px;
+        height: 56px;
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+
+    .heart {
+        background-image: url('./src/Images/heart.png');
+        width: 56px;
+        height: 56px;
+        display: inline-block;
+    }
+
+    .affection-btn {
+        border: 0;
+        padding: 0;
+        margin: 5px;
+        height: 56px;
+
+        &:hover {
+            box-shadow: 0 0 10px whitesmoke
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+}
