@@ -1,5 +1,5 @@
 body {
-    background-color: #2c2530;
+    background-color: #8c7a96;
     color: whitesmoke;
 }
 
@@ -43,5 +43,36 @@ body {
         &:active {
             opacity: 0.5;
         }
+    }
+
+    .village-tracker {
+        .villager {
+            padding: 5px;
+            margin: 2px;
+            display: inline-block;
+
+            .color-stripe {
+                height: 10px;
+                width: 100%;
+            }
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .tiny-img {
+                width: 36px;
+                height: 36px;
+                margin: 2px;
+            }
+        }
+        .friend {
+            background-color: #499333;
+        }
+    }
+
+    .map {
+        width: 90%;
     }
 }

@@ -5,6 +5,7 @@ import './Styles.scss';
 import WaifuChooser from './src/Components/WaifuChooser';
 import DateTracker from './src/Components/DateTracker';
 import AffectionTracker from './src/Components/AffectionTracker';
+import VillageTracker from './src/Components/VillageTracker';
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class App extends Component {
   }
 
   onChoose(waifu) {
+    console.log('new waifu:', waifu);
     this.setState({ waifu });
   }
 
@@ -32,8 +34,12 @@ class App extends Component {
         {!this.state.waifu ?
           <WaifuChooser onChoose={this.onChoose} /> :
           <div className="tracker">
-            <DateTracker />
-            <AffectionTracker waifu={this.state.waifu} />
+            {this.state.waifu !== 'village' ?
+              <div>
+                <DateTracker />
+                <AffectionTracker waifu={this.state.waifu} />
+              </div> :
+              <VillageTracker />}
           </div>
         }
       </div>
