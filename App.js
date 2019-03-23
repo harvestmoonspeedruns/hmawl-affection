@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   onChoose(waifu) {
-    console.log('new waifu:', waifu);
     this.setState({ waifu });
   }
 

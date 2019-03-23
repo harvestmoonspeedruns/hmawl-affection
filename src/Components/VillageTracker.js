@@ -62,7 +62,7 @@ export default class VillageTracker extends Component {
         role="presentation"
         onClick={() => this.increaseAffection(name)}
       >
-        <div className="color-stripe" style={{ backgroundColor: village[name].color }}/>
+        <div className="color-stripe" style={{ backgroundColor: village[name].color }} />
         <img src={profilePicture[name]} alt={name} />
         <div>{this.state[name]}/{village[name].friend}</div>
         <div>
