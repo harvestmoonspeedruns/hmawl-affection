@@ -16,7 +16,7 @@ const giftImages = {
 };
 
 const profilePicture = {
-  carter: require('../Images/carter.jpg'),
+  carter: require('../Images/carter.png'),
   chris: require('../Images/chris.png'),
   cody: require('../Images/cody.png'),
   daryl: require('../Images/daryl.png'),
