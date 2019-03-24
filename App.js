@@ -23,7 +23,12 @@ class App extends Component {
   }
 
   onReset() {
-    window.location.reload();
+    const reset = confirm('Are you sure you want to delete all saves?');
+
+    if (reset) {
+      localStorage.clear();
+      window.location.reload();
+    }
   }
 
   render() {

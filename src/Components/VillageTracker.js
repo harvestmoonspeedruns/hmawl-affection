@@ -38,15 +38,18 @@ export default class VillageTracker extends Component {
   constructor(props) {
     super(props);
 
+    const prevState = JSON.parse(localStorage.getItem('village'));
+
     const newState = {};
     Object.keys(village).forEach((villager) => {
       newState[villager] = 0;
     });
-    this.state = newState;
+    this.state = prevState || newState;
   }
 
   increaseAffection(villager) {
     this.setState({ [villager]: this.state[villager] + 1 });
+    localStorage.setItem('village', JSON.stringify(this.state));
   }
 
   renderIcon(giftName) {

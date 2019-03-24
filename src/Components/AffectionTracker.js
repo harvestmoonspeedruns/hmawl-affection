@@ -21,13 +21,17 @@ export default class AffectionTracker extends Component {
   constructor(props) {
     super(props);
 
+    const prevData = localStorage.getItem(this.props.waifu);
+
     this.state = {
-      affection: 0,
+      affection: prevData || 0,
     };
   }
 
   increaseAffection(ammount) {
-    this.setState({ affection: this.state.affection + ammount });
+    const newAffection = this.state.affection + ammount;
+    this.setState({ affection: newAffection });
+    localStorage.setItem(this.props.waifu, newAffection);
   }
 
   renderAffection() {
