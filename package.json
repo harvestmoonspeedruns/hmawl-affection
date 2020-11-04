@@ -21,8 +21,8 @@
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "parcel-bundler": "^1.12.3",
-    "sass": "^1.17.0"
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.28.0"
   },
   "dependencies": {
     "react": "^16.8.1",
