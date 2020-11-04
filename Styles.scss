@@ -1,6 +1,9 @@
 body {
     background-color: #8c7a96;
     color: whitesmoke;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14pt;
 }
 
 #app {
@@ -54,6 +57,7 @@ body {
             padding: 5px;
             margin: 5px 2px;
             display: inline-block;
+            position: relative;
 
             .color-stripe {
                 height: 10px;
@@ -70,9 +74,25 @@ body {
                 height: 36px;
                 margin: 2px;
             }
+
+            .complete-btn {
+                position: absolute;
+                top: -8px;
+                left: -8px;
+                background-color: white;
+                padding: 2px;
+                border-radius: 50%;
+                width: 26px;
+                height: 26px;
+                border: 2px solid #999;
+                cursor: pointer;
+            }
         }
         .friend {
             background-color: #499333;
+        }
+        .complete {
+            background-color: #1789a5;
         }
     }
 

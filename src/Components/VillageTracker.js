@@ -43,6 +43,7 @@ export default class VillageTracker extends Component {
     const newState = {};
     Object.keys(village).forEach((villager) => {
       newState[villager] = 0;
+      newState[`${villager}Complete`] = false;
     });
     this.state = prevState || newState;
   }
@@ -52,26 +53,34 @@ export default class VillageTracker extends Component {
     localStorage.setItem('village', JSON.stringify(this.state));
   }
 
+  completeVillager(villager) {
+    this.setState({ [`${villager}Complete`]: !this.state[`${villager}Complete`] });
+    localStorage.setItem('village', JSON.stringify(this.state));
+  }
+
   renderIcon(giftName) {
     return <img title={giftName} className="tiny-img" key={giftName} src={giftImages[giftName]} alt={giftName} />;
   }
 
   renderVillager(name) {
     return (
-      <div
-        className={`villager ${name} ${this.state[name] >= village[name].friend ? 'friend' : 'enemy'}`}
-        key={name}
-        title={name}
-        role="presentation"
-        onClick={() => this.increaseAffection(name)}
-      >
-        <div className="color-stripe" style={{ backgroundColor: village[name].color }} />
-        <img src={profilePicture[name]} alt={name} />
-        <div>{this.state[name]}/{village[name].friend}</div>
-        <div>
-          {village[name].likes.map(item => this.renderIcon(item))}
+      <div className={`villager`}>
+        <div
+          className={`${name} ${this.state[name] >= village[name].friend ? 'friend' : 'enemy'} ${this.state[`${name}Complete`] ? 'complete' : 'gifting'}`}
+          key={name}
+          title={name}
+          role="presentation"
+          onClick={() => this.increaseAffection(name)}
+        >
+          <div className="color-stripe" style={{ backgroundColor: village[name].color }} />
+          <img src={profilePicture[name]} alt={name} />
+          <div>{this.state[name]}/{village[name].friend}</div>
+          <div>
+            {village[name].likes.map(item => this.renderIcon(item))}
+          </div>
+          <div>{village[name].time}</div>
         </div>
-        <div>{village[name].time}</div>
+        <div className="complete-btn" onClick={() => this.completeVillager(name)}>{this.state[`${name}Complete`] ? '👍' : '👎'}</div>
       </div>);
   }
 
