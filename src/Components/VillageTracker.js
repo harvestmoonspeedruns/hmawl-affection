@@ -59,7 +59,7 @@ export default class VillageTracker extends Component {
   }
 
   renderIcon(giftName) {
-    return <img title={giftName} className="tiny-img" key={giftName} src={giftImages[giftName]} alt={giftName} />;
+    return <img title={giftName} className="tiny-img" key={giftName} src={giftImages[giftName]} draggable="false" alt={giftName} />;
   }
 
   renderVillager(name) {
@@ -73,7 +73,7 @@ export default class VillageTracker extends Component {
           onClick={() => this.increaseAffection(name)}
         >
           <div className="color-stripe" style={{ backgroundColor: village[name].color }} />
-          <img src={profilePicture[name]} alt={name} />
+          <img src={profilePicture[name]} alt={name} draggable="false" />
           <div>{this.state[name]}/{village[name].friend}</div>
           <div>
             {village[name].likes.map(item => this.renderIcon(item))}
@@ -88,7 +88,7 @@ export default class VillageTracker extends Component {
     return (
       <div className="village-tracker">
         {Object.keys(village).map(name => this.renderVillager(name))}
-        <div><img className="map"src={map} alt="map" /></div>
+        <div><img className="map"src={map} alt="map" draggable="false" /></div>
       </div>
     );
   }
