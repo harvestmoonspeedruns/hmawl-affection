@@ -75,7 +75,7 @@ export const village = {
   },
   hardy: {
     friend: 12,
-    likes: ['flower'],
+    likes: ['fish', 'flower'],
     color: '#8f00c7',
     time: '10am',
   },
