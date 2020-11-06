@@ -9,6 +9,7 @@ export default class WaifuChooser extends Component {
         <button id="muffy" onClick={() => this.props.onChoose('muffy')}>Muffy</button>
         <button id="nami" onClick={() => this.props.onChoose('nami')}>Nami</button>
         <button id="village" onClick={() => this.props.onChoose('village')}>Village</button>
+        <button id="trophies" onClick={() => this.props.onChoose('trophies')}>Trophies</button>
       </div>
     );
   }

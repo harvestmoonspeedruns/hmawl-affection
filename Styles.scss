@@ -14,15 +14,15 @@ body {
         bottom: 5px;
         right: 5px;
     }
-    
+
     img {
-        user-drag: none; 
+        user-drag: none;
         user-select: none;
         -moz-user-select: none;
         -webkit-user-drag: none;
         -webkit-user-select: none;
         -ms-user-select: none;
-    } 
+    }
 
     #undo, #sleep {
         padding: 20px;
@@ -108,5 +108,36 @@ body {
     .map {
         margin-top: 10px;
         width: 98%;
+    }
+
+    .trophy-wrapper {
+
+        border: 2px solid #dddddd;
+
+        .trophy {
+            cursor: pointer;
+            padding: 6px;
+
+            &:hover {
+                background-color: #675a6e;
+            }
+        }
+
+        ul {
+            padding: 5px;
+            margin: 0;
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                padding: 5px;
+                border: 1px solid #675a6e;
+
+                &:hover {
+                    background-color: #675a6e;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }

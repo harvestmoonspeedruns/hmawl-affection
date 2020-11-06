@@ -147,4 +147,37 @@ export const village = {
   },
 };
 
+export const trophies = [
+  { id: 1, name: 'Plenty of Plants' },
+  { id: 2, name: 'Chug, Chug, Chug!' },
+  { id: 3, name: 'Game Time' },
+  { id: 4, name: 'Hook, Line and Sinker' },
+  { id: 5, name: 'Moo Born' },
+  { id: 6, name: 'Fresh Milk' },
+  { id: 7, name: 'Happy Heifer' },
+  { id: 8, name: 'Quack, Quack!' },
+  { id: 9, name: 'Golden Groomer' },
+  { id: 10, name: 'Hatched' },
+  { id: 11, name: 'Sure Beats Walking!' },
+  { id: 12, name: 'Main Course' },
+  { id: 13, name: 'Third Generation' },
+  { id: 14, name: 'Construction Worker' },
+  { id: 15, name: 'Dog Lover' },
+  { id: 16, name: 'The Right Tool for the Job' },
+  { id: 17, name: 'Record Keeping' },
+  { id: 18, name: 'Tidy Tombstone' },
+  { id: 19, name: 'Diligent Digger', subtask: ['TabletC', 'TabletD', 'TabletE', 'TabletF', 'TabletG',] },
+  { id: 20, name: 'Serious Celebrator', subtask: ['Spring', 'Summer', 'Fall', 'Winter'] },
+  { id: 21, name: 'A Hard Bargain' },
+  { id: 22, name: 'Veterinarian' },
+  { id: 23, name: 'Lights in the Sky', subtask: ['CS1', 'CS2', 'CS3', 'CS4', 'CS5', 'CS6'] },
+  { id: 24, name: 'Rise and Shine' },
+  { id: 25, name: 'Chapter 1' },
+  { id: 26, name: 'Chapter 2' },
+  { id: 27, name: 'Chapter 3' },
+  { id: 28, name: 'Chapter 4' },
+  { id: 29, name: 'Chapter 5' },
+  { id: 30, name: 'Chapter 6' },
+];
+
 export default bachelorettes;

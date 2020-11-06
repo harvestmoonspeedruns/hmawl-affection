@@ -6,6 +6,7 @@ import WaifuChooser from './src/Components/WaifuChooser';
 import DateTracker from './src/Components/DateTracker';
 import AffectionTracker from './src/Components/AffectionTracker';
 import VillageTracker from './src/Components/VillageTracker';
+import TrophyTracker from './src/Components/TrophyTracker';
 
 class App extends Component {
   constructor(props) {
@@ -38,12 +39,13 @@ class App extends Component {
         {!this.state.waifu ?
           <WaifuChooser onChoose={this.onChoose} /> :
           <div className="tracker">
-            {this.state.waifu !== 'village' ?
+            {!['village', 'trophies'].includes(this.state.waifu) &&
               <div>
                 <DateTracker />
                 <AffectionTracker waifu={this.state.waifu} />
-              </div> :
-              <VillageTracker />}
+              </div>}
+            {this.state.waifu === 'village' && <VillageTracker />}
+            {this.state.waifu === 'trophies' && <TrophyTracker />}
           </div>
         }
       </div>
